@@ -1,0 +1,45 @@
+/* Text Animation Styles */
+.text-animation-container {
+  height: 70px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.animated-text {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  font-size: 2.8rem;
+  color: var(--white);
+  letter-spacing: 2px;
+}
+
+.fade-up {
+  animation: fadeUpAnimation 0.8s ease forwards;
+}
+
+.fade-out {
+  animation: fadeOutAnimation 0.8s ease forwards;
+}
+
+@keyframes fadeUpAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutAnimation {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
